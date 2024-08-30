@@ -11,7 +11,7 @@ services:
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: admdb
-      WORDPRESS_DB_PASSWORD: *ygig1&KYUAQ^%
+      WORDPRESS_DB_PASSWORD: ygig1&KYUAQ^%
       WORDPRESS_DB_NAME: wordpress
     networks:
       - wordpress     
@@ -25,7 +25,7 @@ services:
     environment:
       MYSQL_DATABASE: wordpress
       MYSQL_USER: admdb
-      MYSQL_PASSWORD: *ygig1&KYUAQ^%
+      MYSQL_PASSWORD: ygig1&KYUAQ^%
       MYSQL_ROOT_PASSWORD: xK^d$oZB1cG4KP
     networks:
       - wordpress     
