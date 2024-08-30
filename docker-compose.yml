@@ -3,7 +3,7 @@ version: '3.1'
 services:
 
   wordpress:
-    image: wordpress
+    image: mywordpres
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     ports:
