@@ -3,18 +3,18 @@ version: '3.1'
 services:
 
   wordpress:
-    image: mywordpres
-    container_name: wordpress
+    image: wordpress
+    container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     ports:
-      - 5087:80
+      - ${WEB_SERVER_PORT}:80
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: admdb
       WORDPRESS_DB_PASSWORD: ygig1&KYUAQ^%
       WORDPRESS_DB_NAME: wordpress
     networks:
-      - wordpress     
+      - wordpress
     volumes:
       - wordpress:/var/www/html
       - ./custom.ini:/usr/local/etc/php/conf.d/custom.ini
@@ -28,10 +28,10 @@ services:
       MYSQL_PASSWORD: ygig1&KYUAQ^%
       MYSQL_ROOT_PASSWORD: xK^d$oZB1cG4KP
     networks:
-      - wordpress     
+      - wordpress
     volumes:
       - db:/var/lib/mysql
-      
+
 volumes:
   wordpress:
   db:
