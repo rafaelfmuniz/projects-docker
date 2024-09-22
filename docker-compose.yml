@@ -3,10 +3,10 @@ version: '3.9'
 services:
 
   wordpress:
-    image: wordpress
+    image: rafaelfmuniz/wordpress-up-5g:latest
     restart: always
     ports:
-      - 5081:80
+      - 5081:80 # edit the port if you need 
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: admdb
@@ -15,8 +15,7 @@ services:
     networks:
       - wordpress
     volumes:
-      - wordpress:/var/www/html
-      - ./custom.ini:/usr/local/etc/php/conf.d/custom.ini 
+      - wordpress:/var/www/html      
     links:
       - db:db
       
