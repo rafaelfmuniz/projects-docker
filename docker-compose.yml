@@ -15,7 +15,8 @@ services:
     networks:
       - wordpress
     volumes:
-      - wordpress:/var/www/html      
+      - wordpress:/var/www/html
+      - ./configs:/usr/local/etc/php/conf.d
     links:
       - db:db
       
