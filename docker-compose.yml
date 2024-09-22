@@ -8,6 +8,7 @@ services:
     ports:
       - 5081:80 # edit the port if you need 
     environment:
+      WORDPRESS_CONFIG_EXTRA: define('WP_REDIS_HOST', 'redis');
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: admdb
       WORDPRESS_DB_PASSWORD: ipM$T1vd@1H@0i
